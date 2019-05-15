@@ -22,7 +22,7 @@ def noise(x,y=0,z=0):
     global perlin
     if perlin == None:
         perlin = []
-        for i in range(0,PERLIN_SIZE+1):
+        for _ in range(0,PERLIN_SIZE+1):
             perlin.append(random.random())
     if x<0:x=-x
     if y<0:y=-y
@@ -85,7 +85,7 @@ class LCG():
         self.c = 1013904223.0   
         self.seed = self.z = None
     def setSeed(self,val=None):
-        self.z = self.seed = (math.random()*self.m if val == None else val) >> 0
+        self.z = self.seed = (random.random()*self.m if val == None else val) >> 0
     def getSeed(self):
         return self.seed
     def rand(self):
@@ -97,7 +97,7 @@ def noiseSeed(seed):
     lcg = LCG()
     lcg.setSeed(seed)
     perlin = []
-    for i in range(0,PERLIN_SIZE+1):
+    for _ in range(0,PERLIN_SIZE+1):
         perlin.append(lcg.rand())
         
         
