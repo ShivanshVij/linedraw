@@ -1,4 +1,7 @@
 # linedraw
+
+## Updated for Python 3 by Shivansh Vij
+
 Convert images to vectorized line drawings for plotters.
 ![Alt text](/screenshots/1.png?raw=true "")
 
